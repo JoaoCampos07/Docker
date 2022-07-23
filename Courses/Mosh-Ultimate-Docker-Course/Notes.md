@@ -45,3 +45,4 @@ run it inside a process__ we tell docker to run it inside a container.
 
 ### What is `Dockarized` an application ? 
 We make a small change in our application. We add a `Docker File`, a plain text file with all the instructions to run our application in a Docker Container. 
+So, after docker we dont need deploy instructions files to deploy we have the Docker file that describes everthing.
