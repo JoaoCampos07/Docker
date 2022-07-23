@@ -21,6 +21,10 @@ The requested operation is successful. Changes will not be effective until the s
 
 ![image](https://user-images.githubusercontent.com/49458268/180616369-2ca57d0d-72c9-44a3-9ba9-826add09acb9.png)
 
+## To check if we have virtualization enabled on BIOS we see on `Task Manager` : 
+
+![image](https://user-images.githubusercontent.com/49458268/180617220-1501b6d8-bda1-4661-b3d5-7df1fe0eeef5.png)
+
 ## To check if the CPU supports SLAT we use a microsoft tool called [CoreInfo](https://docs.microsoft.com/en-us/sysinternals/downloads/coreinfo)
 
 ``` powershell
