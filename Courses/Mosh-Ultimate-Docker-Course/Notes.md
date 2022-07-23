@@ -39,3 +39,9 @@ With that being said, `windows based containers` cannot run on linux was they ne
 on new versions of the windows there is actualy a custom build Linux Kernel. So, Linux containers running on Windows host shared this custom Linux Kernel 
 and Windows Containers use the normal windows kernel that was always shipped with windows. What about Mac ? Mac kernel is very specific and __does not contain native support for containerez applications__ so `Docker on Mac` uses a small Linux VM to run linux containers.
 
+### What we need to put our application in a `Container` ? 
+We need a `Docker File` that describes everthing a application needs to run (every dependencie etc...). Them __instead of directly launch the application and 
+run it inside a process__ we tell docker to run it inside a container.
+
+### What is `Dockarized` an application ? 
+We make a small change in our application. We add a `Docker File`, a plain text file with all the instructions to run our application in a Docker Container. 
