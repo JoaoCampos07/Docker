@@ -20,7 +20,7 @@ one OS license that we will update/patch and monitor.
 
 To conclude : 
 #### Virtual Machines : 
-- __Each VM__ needs a full-blow OS each needs to be licenced, updated and monitored.
+- __Each VM needs a full-blow OS__ each needs to be licenced, updated and monitored.
 - Is hardware resource expensive
 - Is slow to start 
 
@@ -34,9 +34,9 @@ The docker implements a client/server arquitecture so there is a client and serv
 building and running containers. Technicall a `container` is a `process` just like any other, but is a __special kind of process__.
 
 ### How the sharing of the OS works ?
-The containers do not share all the OS, they actually share the Kernel. THe component of OS wich manages applications and hardware resources (is like the _motor in a car_).
+The containers do not share all the OS, they actually share the Kernel. The component of OS wich manages applications and hardware resources (is like the _motor in a car_).
 With that being said, `windows based containers` cannot run on linux was they need to talk to a Windows Kernel. Althgouth `Linux Containers` can run on Windows because 
-on new versions of the windows there is actualy a custom build Linux Kernel. So, Linux containers running on Windows host shared this custom Linux Kernel 
+on new versions of the windows there is actualy a custom build Linux Kernel (microsoft call it `WSDL - Windows Subsystem for Linux`). So, Linux containers running on Windows host shared this custom Linux Kernel 
 and Windows Containers use the normal windows kernel that was always shipped with windows. What about Mac ? Mac kernel is very specific and __does not contain native support for containerez applications__ so `Docker on Mac` uses a small Linux VM to run linux containers.
 
 ### What we need to put our application in a `Container` ? 
