@@ -17,4 +17,7 @@ GUI App Support has been installed.
 Downloading: Ubuntu
 The requested operation is successful. Changes will not be effective until the system is rebooted.
 ```
+## After reboting a terminal will appear automatically that will ask to define a user account for "new OS" :
+
+![image](https://user-images.githubusercontent.com/49458268/180616369-2ca57d0d-72c9-44a3-9ba9-826add09acb9.png)
 
