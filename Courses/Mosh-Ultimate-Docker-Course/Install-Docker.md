@@ -45,3 +45,5 @@ HYPERVISOR      *       Hypervisor is present
 SVM             -       Supports AMD hardware-assisted virtualization
 NP              -       Supports AMD nested page tables (SLAT)
 ```
+## Check if Docker Engine is running : 
+![image](https://user-images.githubusercontent.com/49458268/180646117-c8df7efb-21b2-48fa-a261-ad51a5ed17c3.png)
