@@ -30,8 +30,8 @@ To conclude :
 - Is fast to start.
 
 ### How is the Docker arquitecture ? 
-The docker implements a client/server arquitecture so there is a client and server wich is a Rest API. The server, also called __Docker Engine__ sits on the background
-building and running containers. Technicall a `container` is a `process` just like any other, but is a __special kind of process__.
+The docker implements a client/server arquitecture so there is a client and server wich is a Rest API. The server, also called __Docker Engine__ or __Daemon__ sits on the background
+building and running containers. Technicall a `container` is a `process` just like any other, but is a __special kind of process__ is a __operating-sytem process with its own file system and other stuff (like network adapaters etc...).
 
 ### How the sharing of the OS works ?
 The containers do not share all the OS, they actually share the Kernel. The component of OS wich manages applications and hardware resources (is like the _motor in a car_).
