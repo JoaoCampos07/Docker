@@ -48,7 +48,7 @@ We make a small change in our application. We add a `Docker File`, a plain text 
 So, after docker we dont need deploy instructions files to deploy we have the Docker file that describes everthing.
 
 ## The Linux Command Line  
-## Let's start by running a docker container interactively : 
+### Let's start by running a docker container interactively : 
 ``` powershell
 docker pull ubuntu 
 # OR 
@@ -78,5 +78,12 @@ f1b140cdc82b   hello-docker   "docker-entrypoint.s…"   22 hours ago    Exited 
 ```
 ![image](https://user-images.githubusercontent.com/49458268/180814044-e03a07e1-0f42-47b0-97b2-037ed0d2b27b.png)
 
+What `root@7e01079dc012:/#` stands for ? 
+- root : the name of the user. The `root` user in this case is the most priviliged user.
+- @ :
+- 7e01079dc012 : 
+- / : We are in the highest directory of the file system inside the container
+- # : It means i have all the priviligies. Instead of `#` i could have `$`.
 
 ## Why the container just shutsdown when we do `docker run [image]` ?
+Is like this by default, if we dont interact with it, it just shutsdown.
