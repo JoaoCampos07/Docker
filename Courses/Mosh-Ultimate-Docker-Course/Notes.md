@@ -48,3 +48,35 @@ We make a small change in our application. We add a `Docker File`, a plain text 
 So, after docker we dont need deploy instructions files to deploy we have the Docker file that describes everthing.
 
 ## The Linux Command Line  
+## Let's start by running a docker container interactively : 
+``` powershell
+docker pull ubuntu 
+# OR 
+docker run ubuntu
+# Like that will search for this image locally and if it does not find it
+# will pull it from the internet
+```
+Them we have :
+``` powershell
+PS C:\Users\joaoc> docker pull ubuntu
+Using default tag: latest
+latest: Pulling from library/ubuntu
+405f018f9d1d: Pull complete
+Digest: sha256:b6b83d3c331794420340093eb706a6f152d9c1fa51b262d9bf34594887c2c7ac
+Status: Downloaded newer image for ubuntu:latest
+docker.io/library/ubuntu:latest
+```
+When we do `docker run` the container just build, runs and shutsdown. So we need to build it interactively :
+``` powershell
+PS C:\Users\joaoc> docker run ubuntu
+PS C:\Users\joaoc> docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+PS C:\Users\joaoc> docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS                     PORTS     NAMES
+4d9397cd0bf1   ubuntu         "bash"                   9 seconds ago   Exited (0) 8 seconds ago             sleepy_blackwell
+f1b140cdc82b   hello-docker   "docker-entrypoint.s…"   22 hours ago    Exited (0) 22 hours ago              zealous_galois
+```
+![image](https://user-images.githubusercontent.com/49458268/180814044-e03a07e1-0f42-47b0-97b2-037ed0d2b27b.png)
+
+
+## Why the container just shutsdown when we do `docker run [image]` ?
