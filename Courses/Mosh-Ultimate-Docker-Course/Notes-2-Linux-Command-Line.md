@@ -111,6 +111,7 @@ Building dependency tree... Done
 Reading state information... Done
 9 packages can be upgraded. Run 'apt list --upgradable' to see them.
 ```
+And them install what we want
 ``` powershell
 root@7e01079dc012:/# apt install nano
 Reading package lists... Done
