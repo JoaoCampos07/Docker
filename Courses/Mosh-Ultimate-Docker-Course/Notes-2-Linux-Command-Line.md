@@ -203,7 +203,7 @@ source .bashrc # reload .bashrc file configuration
 echo $DB_USER # it should work 
 ```
 
-##### Q :
+##### Questions :
 - What is Environment Variables ?
 A environemnt variable is a dynamic value that the OS or other programs can use. WIth docker we normally use them to store configuration settings.
 - What is the PATH variable ?
