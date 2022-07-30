@@ -44,6 +44,7 @@ What this `root@7e01079dc012:/#` stands for ?
 ##### Why the container just shutsdown when we do `docker run [image]` ?
 Is like this by default, if we dont interact with it, it just shutsdown.
 
+<br></br>
 ### Managing Packages 
 In our days most of the times OS came with a `Package Manager`. For example : 
 - npm
