@@ -143,3 +143,16 @@ root@7e01079dc012:/#
 #### What if even with the update we dont get the reference in the database for instalation ? 
 
 <br></br>
+
+
+### Linux File System : 
+#### Windows File System vs Linux File System
+![image](https://user-images.githubusercontent.com/49458268/181918859-a179e98b-64ee-43bb-9d76-60ceb48fe8e0.png)
+![image](https://user-images.githubusercontent.com/49458268/181918883-623efbfe-30c0-46a5-95ea-4255e6dba91b.png)
+
+#### Typical Commands :
+- PWD 
+- cd [Relative | Absolute Path]
+- echo 
+- cd ~ (is like doing cd to the user directory, if is `Root` it will go to root dir if is normal user it will go to `home`)
+(...)
