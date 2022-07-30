@@ -52,7 +52,7 @@ In our days most of the times OS came with a `Package Manager`. For example :
 - pim
 - yarn
 
-Linux is no different, and __it comes with `apt`__ .
+Linux is no different, and __it comes with `apt` (Advance Package Tool)__ .
 `APT` makes use of a database in linux where is the references to possible packages that we need, and if they are installed or not : 
 ``` powershell
 root@7e01079dc012:/# apt list
