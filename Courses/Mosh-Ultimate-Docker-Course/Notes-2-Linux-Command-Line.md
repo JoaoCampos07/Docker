@@ -233,3 +233,17 @@ root@1ead6fa28f93:~# ps
    21 pts/0    00:00:00 sleep
    22 pts/0    00:00:00 ps
 ```
+Killing a process : 
+``` powershell
+root@1ead6fa28f93:~# ps
+  PID TTY          TIME CMD
+    1 pts/0    00:00:00 bash
+   23 pts/0    00:00:00 sleep
+   24 pts/0    00:00:00 ps
+root@1ead6fa28f93:~# kill 23
+root@1ead6fa28f93:~# ps
+  PID TTY          TIME CMD
+    1 pts/0    00:00:00 bash
+   25 pts/0    00:00:00 ps
+[1]+  Terminated              sleep 100
+```
