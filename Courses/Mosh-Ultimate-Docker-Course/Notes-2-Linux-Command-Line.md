@@ -193,3 +193,21 @@ root@1ead6fa28f93:/# mkdir test.txt;\
 > echo done
 ```
 #### Environment Variables :
+``` powershell 
+printenv # print all environment variables
+printenv PATH # print value of specific variable
+echo $PATH # same was above 
+export DB_USER=Campos # create OS environment variable for current terminal session (after existing and entering container i will lost it)
+echo DB_USER=Campos >> .bashrc # using 'redirection APPEND (NOT override with '>') to .bashrc file each is used on startup 
+source .bashrc # reload .bashrc file configuration 
+echo $DB_USER # it should work 
+```
+
+##### Q :
+- What is Environment Variables ?
+A environemnt variable is a dynamic value that the OS or other programs can use. WIth docker we normally use them to store configuration settings.
+- What is the PATH variable ?
+Is a very important variable that the OS uses to check for programs. When we are doing `dotnet` or `java` the OS will not go search in all the disks for those 
+programs, it will go to very specific directories. These directories are described in the `PATH` environment variable. 
+- What is the .bashrc file ?
+- Why after `echo DB_USER=Campos >> .bashrc`, the variable does not appear for command `printenv` ?
