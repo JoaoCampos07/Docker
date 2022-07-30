@@ -40,7 +40,7 @@ What this `root@7e01079dc012:/#` stands for ?
 - / : (Where we are) We are in the highest directory of the file system inside the container
 - '#' : It means i have all the priviligies. Instead of `#` i could have `$`, if log in was a normal user.
 
-#### Q: 
+#### Questions : 
 ##### Why the container just shutsdown when we do `docker run [image]` ?
 Is like this by default, if we dont interact with it, it just shutsdown.
 
@@ -138,5 +138,5 @@ update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mod
 update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file 
 root@7e01079dc012:/#
 ```
-#### Q : 
+#### Questions : 
 #### What if even with the update we dont get the reference in the database for instalation ? 
