@@ -164,4 +164,5 @@ root@7e01079dc012:/#
 - less (to check big files, we can scroll up and down)
 - head (to check first lines, we can pass if is 5 lines 4 etc...)
 - tail (to check last lines)
+- > (to do redirection of output)
 (...)
