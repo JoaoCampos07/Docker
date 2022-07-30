@@ -151,7 +151,7 @@ root@7e01079dc012:/#
 ![image](https://user-images.githubusercontent.com/49458268/181918883-623efbfe-30c0-46a5-95ea-4255e6dba91b.png)
 
 #### Typical Commands :
-- PWD 
+- pwd 
 - cd [Relative | Absolute Path]
 - echo 
 - cd ~ (is like doing cd to the user directory, if is `Root` it will go to root dir if is normal user it will go to `home`)
