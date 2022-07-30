@@ -210,4 +210,5 @@ A environemnt variable is a dynamic value that the OS or other programs can use.
 Is a very important variable that the OS uses to check for programs. When we are doing `dotnet` or `java` the OS will not go search in all the disks for those 
 programs, it will go to very specific directories. These directories are described in the `PATH` environment variable. 
 - What is the .bashrc file ?
+Is a bash script that is loaded on boot stage of the OS and was user account configuration, like environemnt variables.
 - Why after `echo DB_USER=Campos >> .bashrc`, the variable does not appear for command `printenv` ?
