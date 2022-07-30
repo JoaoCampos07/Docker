@@ -166,3 +166,26 @@ root@7e01079dc012:/#
 - tail (to check last lines)
 - '>' (to do redirection of output)
 (...)
+
+#### Typical Commands :
+##### Chainning
+``` bash
+mkdir test ; cd test ; echo done # do one command one by one, it does not matter if one of them fails, it carries on...
+mkdir test && cd test && echo done # do command one by one, if one fails, stop execution 
+mkdir test | echo 'directory exists' # do first command, if it fails do the other one
+```
+##### Piping
+``` bash 
+ls /bin | less # grab all the directories names from bin and use them was input to `less`
+ls \bin | head -5 # grab all the dirs names in bin and use them to with `head` cmd. 
+```
+``` bash
+root@1ead6fa28f93:/# ls \bin | head -5
+[
+addpart
+apt
+apt-cache
+apt-cdrom
+```
+
+#### Environment Variables :
