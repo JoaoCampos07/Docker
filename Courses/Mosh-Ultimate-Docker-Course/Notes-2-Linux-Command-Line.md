@@ -133,9 +133,9 @@ Preparing to unpack .../archives/nano_6.2-1_amd64.deb ...
 Unpacking nano (6.2-1) ...
 Setting up nano (6.2-1) ...
 update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
-update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/nano.1.gz
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file
 update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
-update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz
+update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file 
 root@7e01079dc012:/#
 ```
 #### Q : 
