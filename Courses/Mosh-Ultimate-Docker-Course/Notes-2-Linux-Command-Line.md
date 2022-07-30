@@ -167,7 +167,6 @@ root@7e01079dc012:/#
 - '>' (to do redirection of output)
 (...)
 
-#### Typical Commands :
 ##### Chainning
 ``` bash
 mkdir test ; cd test ; echo done # do one command one by one, it does not matter if one of them fails, it carries on...
@@ -187,5 +186,10 @@ apt
 apt-cache
 apt-cdrom
 ```
-
+Writing commands in paragraphs :
+``` bash
+root@1ead6fa28f93:/# mkdir test.txt;\
+> cd test;\
+> echo done
+```
 #### Environment Variables :
