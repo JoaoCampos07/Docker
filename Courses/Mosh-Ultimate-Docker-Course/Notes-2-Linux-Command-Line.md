@@ -212,3 +212,24 @@ programs, it will go to very specific directories. These directories are describ
 - What is the .bashrc file ?
 Is a bash script that is loaded on boot stage of the OS and was user account configuration, like environemnt variables.
 - Why after `echo DB_USER=Campos >> .bashrc`, the variable does not appear for command `printenv` ?
+
+### Managing Processes 
+A process is instance of a program. 
+``` powershell
+# we use ps to check each processes are running :
+root@1ead6fa28f93:~# ps
+  PID TTY          TIME CMD
+    1 pts/0    00:00:00 bash
+   18 pts/0    00:00:00 ps
+```
+Some other commands : 
+``` powershell
+sleep 2 # BASH sleeps for 2 seconds
+sleep 100 & # Puts a BASH sleeping for 100 seconds in the background
+
+root@1ead6fa28f93:~# ps
+  PID TTY          TIME CMD
+    1 pts/0    00:00:00 bash
+   21 pts/0    00:00:00 sleep
+   22 pts/0    00:00:00 ps
+```
