@@ -283,4 +283,6 @@ PS C:\Users\joaoc> docker exec -it -u paula 1885f bash
 paula@1885fa06a256:/$ 
 paula@1885fa06a256:/$ cat etc/shadow
 cat: etc/shadow: Permission denied
+paula@1885fa06a256:~$ pwd
+/home/paula
 ```
