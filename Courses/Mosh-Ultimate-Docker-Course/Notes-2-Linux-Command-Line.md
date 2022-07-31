@@ -321,5 +321,26 @@ root@1885fa06a256:/# groups paula
 paula : developers artists
 ```
 
-
+### File Permissions 
+``` powershell
+root@1885fa06a256:/home# touch deploy.sh
+# We write some 'echo command' inside :
+root@1885fa06a256:/home# echo echo 'Hello Docker' > deploy.sh
+# we check the permissions for user that owns the file | group that owns the file | others : 
+root@1885fa06a256:/home# ls -l
+total 8
+-rw-r--r-- 1 root  root         18 Jul 31 08:58 deploy.sh
+drwxr-x--- 2 paula developers 4096 Jul 31 08:12 paula
+root@1885fa06a256:/home# ./deploy.sh
+bash: ./deploy.sh: Permission denied
+# We change execution permission :
+root@1885fa06a256:/home# chmod u+x deploy.sh
+# We check permissions one more time : 
+root@1885fa06a256:/home# ls -l
+total 8
+-rwxr--r-- 1 root  root         18 Jul 31 08:58 deploy.sh
+drwxr-x--- 2 paula developers 4096 Jul 31 08:12 paula
+root@1885fa06a256:/home# ./deploy.sh
+Hello Docker
+```
 
