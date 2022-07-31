@@ -280,4 +280,6 @@ we need to __execute__ a bash session inside our container
 
 PS C:\Users\joaoc> docker exec -it -u paula 1885f bash
 paula@1885fa06a256:/$ # I have $ sign each means i just a regular user
+paula@1885fa06a256:/$ cat etc/shadow
+cat: etc/shadow: Permission denied
 ```
