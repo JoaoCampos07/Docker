@@ -213,6 +213,7 @@ programs, it will go to very specific directories. These directories are describ
 Is a bash script that is loaded on boot stage of the OS and was user account configuration, like environemnt variables.
 - Why after `echo DB_USER=Campos >> .bashrc`, the variable does not appear for command `printenv` ?
 
+<br></br>
 ### Managing Processes 
 A process is instance of a program. 
 ``` powershell
@@ -246,4 +247,34 @@ root@1ead6fa28f93:~# ps
     1 pts/0    00:00:00 bash
    25 pts/0    00:00:00 ps
 [1]+  Terminated              sleep 100
+```
+
+<br></br>
+### Managing Users :
+For creating a user we use `useradd`. We can also use `adduser` each is a post-script that uses `useradd` each is more interactive. Normally 
+we want to be quick and just use `useradd`.
+
+#### Creating a User and check account information 
+Creating a user : 
+``` powershell
+useradd -m paula # we create Paula user with Home directory using `-m, --create-home`
+```
+Next we can see the user account information 
+``` powershell
+root@1885fa06a256:/# cat etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+# (...)
+paula:x:1000:1000::/home/paula:/bin/sh # [username] : [x - password stored somehere else] : [user id] : [group id] : [home directory] : [default shell program used when user logins in]
+```
+#### Change default shell on startup :
+Paula prefers to use `bash` instead of `sh` shell application. So, to _change shell default program_ : 
+``` powershell
+usermod -s /bin/bash paula
+```
+
+#### Login in container with another user :
+we need to __execute__ a bash session inside our container 
+``` powershell
+docker exec -it -u paula 1885f bash
 ```
