@@ -286,3 +286,32 @@ cat: etc/shadow: Permission denied
 paula@1885fa06a256:~$ pwd
 /home/paula
 ```
+<br></br>
+### Managing Users Groups:
+We have user groups __ so that a group of users have the save priviligies__ 
+Creating a group : 
+``` powershell
+root@1885fa06a256:/# addgroup developers
+root@1885fa06a256:/# cat etc/group
+# (...)
+# All users need to have a primary group each is the one that appears when we create a file
+paula:x:1000:
+developers:x:1001: # [group-name] : [password save else here] : [group-id]
+```
+Changing the primary group of the user " 
+``` powershell
+# Change Paula primary group to developers instead of default one (paula group)
+root@1885fa06a256:/# usermod -g developers paula
+# Check Paula primary group now
+root@1885fa06a256:/# cat etc/passwd | grep paula
+paula:x:1000:1001::/home/paula:/bin/bash
+# Confirm that the id of developers group, now the primary group of Paula, is 1001
+root@1885fa06a256:/# cat etc/group | grep developers
+developers:x:1001:
+# Checking Paula Groups
+root@1885fa06a256:/# groups paula
+paula : developers
+```
+
+
+
