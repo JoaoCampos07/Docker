@@ -311,6 +311,14 @@ developers:x:1001:
 # Checking Paula Groups
 root@1885fa06a256:/# groups paula
 paula : developers
+# Add Paula to a secondary group
+# Create a new group :
+root@1885fa06a256:/# addgroup artists
+Adding group `artists' (GID 1002) ...
+Done.
+root@1885fa06a256:/# usermod -a -G artists paula
+root@1885fa06a256:/# groups paula
+paula : developers artists
 ```
 
 
