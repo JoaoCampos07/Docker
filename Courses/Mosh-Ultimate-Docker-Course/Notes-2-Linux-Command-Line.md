@@ -276,5 +276,8 @@ usermod -s /bin/bash paula
 #### Login in container with another user :
 we need to __execute__ a bash session inside our container 
 ``` powershell
-docker exec -it -u paula 1885f bash
+# docker exec -it -u paula 1885f bash
+
+PS C:\Users\joaoc> docker exec -it -u paula 1885f bash
+paula@1885fa06a256:/$ # I have $ sign each means i just a regular user
 ```
