@@ -156,6 +156,7 @@ root@7e01079dc012:/#
 - echo 
 - cd ~ (is like doing cd to the user directory, if is `Root` it will go to root dir if is normal user it will go to `home`)
 - rm (to remove files) OR rm -r (to remove a folder, removes all the files and dirs inside recursively) 
+- history (them type `!N` )
 - mkdir (creates dir)
 - touch (create one or multiple files)
 - mv (to move or rename files or directories)
