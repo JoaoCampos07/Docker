@@ -18,3 +18,6 @@ docker-machine create --driver none # (...)
 ## What is SSH (Secure Shell) ? 
 Is a protocol to communicate/connect with servers with security. With SSH we can open a secure shell session with out server. Remember a shell is a application
 that allows to pass command to the OS. 
+
+## What is the different between NPM and a Web Server (in this case we use NGINX) ? 
+In the example after building the application Mosh do not need the runtime of Node with WebServer and lot of other stuff, we just needs a Webserver like NGINX.
