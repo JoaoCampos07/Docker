@@ -14,3 +14,7 @@ Yes, we can, if i have server on my private network and not in the cloud provide
 ``` powershell
 docker-machine create --driver none # (...)
 ```
+
+## What is SSH (Secure Shell) ? 
+Is a protocol to communicate/connect with servers with security. With SSH we can open a secure shell session with out server. Remember a shell is a application
+that allows to pass command to the OS. 
