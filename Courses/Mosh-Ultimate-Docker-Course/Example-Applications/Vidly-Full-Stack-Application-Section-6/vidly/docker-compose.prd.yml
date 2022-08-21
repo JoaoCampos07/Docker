@@ -7,6 +7,7 @@ services:
     build: 
       context: ./frontend
       dockerfile: Dockerfile.prd
+    image: vidly_frontend_v1
     ports:
       - 80:80
     restart: unless-stopped
@@ -14,6 +15,7 @@ services:
     depends_on: 
       - db
     build: ./backend
+    image: vidly_backend_v1
     ports: 
       - 3001:3001
     environment: 
