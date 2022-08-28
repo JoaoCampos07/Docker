@@ -54,3 +54,13 @@ docker cp secret.txt <containerID>:/app
 ``` powershell
 docker run -v $(pwd):/app <image>
 ``` 
+
+## Clean our Workspace : 
+### 1. Remove all containers (before images) : 
+``` powershell
+docker container rm -f $(docker container ls -a -q)
+```
+### 2. Remove all images : 
+``` powershell
+docker image rm $(docker image ls -q)
+```
