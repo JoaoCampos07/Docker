@@ -64,3 +64,6 @@ docker container rm -f $(docker container ls -a -q)
 ``` powershell
 docker image rm $(docker image ls -q)
 ```
+
+## Questions : 
+### If i build some image and them i need to make changes, how i avoid creating new image ? How can i overide existing image ?
