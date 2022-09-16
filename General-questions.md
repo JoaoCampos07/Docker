@@ -94,6 +94,9 @@ The `ENTRYPOINT` field allows us to configure a container that will run as an ex
 ### What is the default Docker Host IP ? (pag. 91)
 The default Docker Host IP is always 10.0.75.1
 
+### How can i set up a container with powershell ? ( pag. 93)
+Using Windows Container modules.
+
 <br></br>
 ## Containerizing monolithic applications
 
