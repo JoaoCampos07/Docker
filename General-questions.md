@@ -62,3 +62,58 @@ run it inside a process__ we tell docker to run it inside a container.
 ### What is `Dockarized` an application ? 
 We make a small change in our application. We add a `Docker File`, a plain text file with all the instructions to run our application in a Docker Container. 
 So, after docker we dont need deploy instructions files to deploy we have the Docker file that describes everthing.
+
+### What the field `ENTRYPOINT` does in the Docker file ? 
+The `ENTRYPOINT` field allows us to configure a container that will run as an executable. The `ENTRYPOINT` defines the process whose lifetime controls the lifetime of the container. 
+     
+### What kind of processes the Containers can represent ? 
+The container can represent long-term processe's like Web servers, or short-term processes like Batch jobs that we do with Scripts in Windows to them run them was services.
+
+<br></br>
+## Containerizing monolithic applications
+
+### If you have to create some application fast, like a POC application, what you would use ? Monolitic apporach or microservices ? (pag. 20)
+I would use monolithic approach because the development is normally much easier. I dont have to worry about cross-cutting converns in multiple applications, is much easier to debug and test and also is simple to deploy. 
+
+#### References : 
+- https://www.n-ix.com/microservices-vs-monolith-which-architecture-best-choice-your-business/
+    
+### What is the problem of using containers for a big monolitch application ? 
+When the application grows, some of his components are choke points and need to be scale. But all the rest not was is used less. So we wil scale horizontal, have multiple instances just because of some parts of the application, __wasting resources and time !__ . Also, is much more easy with microservices to split the work by teams than make everyone work in the same solution.
+    
+### Which products i can use from `Azure` to deploy my applications ? (pag.20)
+We have `Azure Balancer` was a `Load Balancer` instead of F5. `Azure App Service` let's deploy applications in the cloud. 
+
+#### References : 
+- https://azure.microsoft.com/en-us/services/app-service/#overview ; https://docs.microsoft.com/en-us/azure/architecture/aws-professional/services
+  
+### How can i make the deployment of my application with Docker ? 
+Deployment to our several hosts can be done using the traditional techniques. If we are using docker hosts can be managed with commands like 'docker run' or 'docker-compose' performed manually or thought automation such as continuos delivery using `TeamCity` or `Jenkins`. Deployment of new versions of the application __using docker images is faster and network friendly__.    
+To just run our application in a Docker container we just need to do like says [here](https://docs.docker.com/get-started/02_our_app/). In a pipeline is more complex.
+   
+### What a container orchestrator does ?   
+Container orchestrators creates and manage the various intanstances that need and also manages their lifetime.
+  
+### Why can i think of a container was instance of a process ?
+Because just like a process a container does not maintain persistent state. However, we need to think of it was a `special process` that was is own File System.
+
+<br></br>
+## State and data in Docker applications
+
+### What are the solutions for managing Data in Docker applications ? 
+Volumes, Bind Mounts, tmpfs mounts our Remote storage, using `Azure Store` or Remote Relational Databases (RBMS).
+   
+### When use Docker Volumes where the data in stored in filesystem ? 
+Is stored in a area (directory or disk) that's managed by Docker. 
+  
+### What is the security problem with Bind Mounts ?
+Bind mounts can map to any folder in the host filesystem, allowing the container to write or read to virtually any place. And maybe some directory was sensitive information and should not be accessed by some users.
+  
+### What are tmpfs mounts ? 
+Are like virtual folders inside the host memory that are never really created in the filesystem, they just exist in dynamic memory.
+   
+### How can i share data between containers that live in different hosts ? 
+I can use Redis, SQL Databases or Non-SQL databases. We can also use a remote driver that supports remote hosts.
+   
+### Why i should not use data volumes for business data ? 
+The data volumes are shared between the containers and the containers can "move" between hosts, so we may end up losing business data because some microserivce did not had the access to the data volume that we expected. 
