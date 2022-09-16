@@ -136,3 +136,23 @@ I can use Redis, SQL Databases or Non-SQL databases. We can also use a remote dr
    
 ### Why i should not use data volumes for business data ? 
 The data volumes are shared between the containers and the containers can "move" between hosts, so we may end up losing business data because some microserivce did not had the access to the data volume that we expected. 
+
+<br></br>
+## Orchestrate microservices and multi-container applications for high scalability and availability
+
+### How to handle load-balancing, routing, and orchestrating for these composed applications? 
+Well, the docker engine is perfectly capable of managing a couple of containers in a Host, however it falls short when managing multiple cointainers in multiple hosts.  For those cases we need a management platform that will start containers, scale out with multiple instances per image, restart or shutdown them down, and if possible controlling their acess to resources like storage and network. These management platforms are called : orchestration and clustering platforms. These platforms help us to scale out applications across many Docker hosts and managed them was single clusters (wich makes things much easier). Kubernetes is an example of an orchestrator, and is available in Azure through Azure Kubernetes Service. These clusters can have Schedulling (most of them, like Kubernets do...) wich means the capability for an administrator to launch containers in a cluster. A cluster scheduller was several responsabilities : 
+- Use the cluster's resources efficiently setting constratinst provided by the user
+- Efficiently load-bralancers containers across nodes or hosts
+- And to make sure the clusters is robust agains errors while providing High availability
+Examples of such products : `Kubernets` ; `Azure Kubernetes Service`
+      
+### Can we use Docker engine to manage several containers deployed across many machines/hosts ?
+Well, the docker engine is perfectly capable of managing a couple of containers in a Host, however it falls short when managing multiple cointainers in multiple hosts. What is a orchestrator ? 
+A orchestrator is a platform wich help us to scale out applications across many Docker hosts and managed them was single clusters (wich makes things much easier). Kubernetes is an example of an orchestrator, and is available in Azure through Azure Kubernetes Service.
+    
+### What are Helm Charts ? 
+Is part of a production deployment strategy. For more simple applications when you want to deploy to Kubernets we can just use the CLI and a simple YAML file to have the configuration. However in more complex microservice based-applications is recommende to use Helm charts. Because with Helm charts we can define, version, rollback, install, share and upgrade the most-complex applications. Some Kubernetes Azure services make use of Helm charts was well, for example `Azure Dev Spaces`.
+      
+### Why do we yse Helm Charts ? 
+We use Helm charts to easily define, version, install, share, rollback and upgrade the most complex kubernets based applications.
