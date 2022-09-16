@@ -21,8 +21,6 @@ To host containers in development environments and provide additional developer 
 ### What are the two types of runtimes to run Windows Containers ? 
 We have Windows Server Containers, they have isolation of each other throught process and namespace isolation (What is that ??). This type of containers share the Kernel with container host and with all the other containers running. Them we have Hyper-V containers they have better isolation because they run in a highly optimized virtual machine. In this case this type of containers do not share the Kernel with the Containers Host. The images for these containers are created the same way and function the same. The difference is in how the container is created from the image.
 
-### What is the difference between virtual machines and docker containers ? 
-
 ### What is a virtual machine ?
 Is a abstraction of an OS wich is created by a so-called `HyperVisor` - __physical hardware__. In windows the `Hyper-V` is used, and this one is exclusive for wirndows. 
 
