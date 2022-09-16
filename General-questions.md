@@ -12,9 +12,6 @@ Containers offer the __benefits of isolation, portability, agility, scalability,
 Is a platform to build, deploy and run applications in a consisttent matter (across environemnts withou `It works on my machine!`). 
 > Docker is an open-source project for automating the deployment of applications as portable, self-sufficient containers that can run on the cloud or on-premises. Docker is also a company that promotes and evolves this technology.
 
-### Can windows images run on Linux at the time of this writing ? 
-No, Windows images can run only on Windows Hosts and Linux images can run only on Windows (using a Hyper-V linux VM) or Linux hosts. Where host means a server or a VM.
-
 ### What i need to run docker containers on my Windows development machine ? 
 To host containers in development environments and provide additional developer tools, Docker ships Docker Community Edition (CE) for Windows. These products install the necessary VM (the Docker host) to host the containers.
 
