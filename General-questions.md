@@ -91,6 +91,8 @@ We have :
 ### What the field `ENTRYPOINT` does in the Docker file ? 
 The `ENTRYPOINT` field allows us to configure a container that will run as an executable. The `ENTRYPOINT` defines the process whose lifetime controls the lifetime of the container. 
 
+
+
 <br></br>
 ## Containerizing monolithic applications
 
@@ -141,6 +143,12 @@ I can use Redis, SQL Databases or Non-SQL databases. We can also use a remote dr
 The data volumes are shared between the containers and the containers can "move" between hosts, so we may end up losing business data because some microserivce did not had the access to the data volume that we expected. 
 
 <br></br>
+## Working with Multi-container applications 
+
+### Why we need a docker-compose.yml file ? (pag. 85)
+We need it when we have a `multi-container application`. In the docker-compose.yml file we can define the set of related services/applications as a composed application using deployment commands. Configure all the dependencies of those services on each other and add run-time configuration. After we create that file we can run `docker-compose up --build` command against the `docker-compose.yml` file. This command will build all the related necessary images in __one go__. In such file we can find the name of the custom image for wich application and __configuration that might depend on the deployment environment__, like the connection string.
+
+<br></br>
 ## Orchestrate microservices and multi-container applications for high scalability and availability
 
 ### How to handle load-balancing, routing, and orchestrating for these composed applications? 
@@ -157,5 +165,5 @@ A orchestrator is a platform wich help us to scale out applications across many 
 ### What are Helm Charts ? 
 Is part of a production deployment strategy. For more simple applications when you want to deploy to Kubernets we can just use the CLI and a simple YAML file to have the configuration. However in more complex microservice based-applications is recommende to use Helm charts. Because with Helm charts we can define, version, rollback, install, share and upgrade the most-complex applications. Some Kubernetes Azure services make use of Helm charts was well, for example `Azure Dev Spaces`.
       
-### Why do we yse Helm Charts ? 
+### Why do we use Helm Charts ? 
 We use Helm charts to easily define, version, install, share, rollback and upgrade the most complex kubernets based applications.
