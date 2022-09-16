@@ -3,7 +3,7 @@ Containerization is an approach to software development in which an application 
 (abstracted as deployment manifest files) are packaged together __as a container image__.
 
 ### What is a container ? 
-An __isolated environment__ for running an application(or applications).
+An __isolated environment__ for running an application(or applications). A container is like a virtual machine in the sense that provides a isolated environment to run our applications. Can be stopped and restarted. Is just a OS process, but a special kind of process because it was is own File System.
 
 ### What is the advantages of containerization ? 
 Containers offer the __benefits of isolation, portability, agility, scalability, and control__ across the whole application lifecycle workflow. 
