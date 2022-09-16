@@ -65,6 +65,16 @@ Is a file wich allows us to config the container for our application such that t
            
           Add > Docker Support.
 
+### What is `Dockarized` an application ? 
+We make a small change in our application. We add a `Docker File`, a plain text file with all the instructions to run our application in a Docker Container. 
+So, after docker we dont need deploy instructions files to deploy we have the Docker file that describes everthing.
+
+### What kind of processes the Containers can represent ? 
+The container can represent long-term processe's like Web servers, or short-term processes like Batch jobs that we do with Scripts in Windows to them run them was services.
+
+<br></br>
+## Setting up Dockerfile and building images 
+
 ### Each commands i have in the docker file ? 
 We have : 
 - From : `Specify Base image. To start the container __From__ a basic operation system base image`
@@ -78,16 +88,8 @@ We have :
 - Cmd : `To specify the command that should be executured when we start a container`
 - Entrypoint : `To specify the command that should be executured when we start a container`
 
-
-### What is `Dockarized` an application ? 
-We make a small change in our application. We add a `Docker File`, a plain text file with all the instructions to run our application in a Docker Container. 
-So, after docker we dont need deploy instructions files to deploy we have the Docker file that describes everthing.
-
 ### What the field `ENTRYPOINT` does in the Docker file ? 
 The `ENTRYPOINT` field allows us to configure a container that will run as an executable. The `ENTRYPOINT` defines the process whose lifetime controls the lifetime of the container. 
-     
-### What kind of processes the Containers can represent ? 
-The container can represent long-term processe's like Web servers, or short-term processes like Batch jobs that we do with Scripts in Windows to them run them was services.
 
 <br></br>
 ## Containerizing monolithic applications
