@@ -91,7 +91,8 @@ We have :
 ### What the field `ENTRYPOINT` does in the Docker file ? 
 The `ENTRYPOINT` field allows us to configure a container that will run as an executable. The `ENTRYPOINT` defines the process whose lifetime controls the lifetime of the container. 
 
-
+### What is the default Docker Host IP ? (pag. 91)
+The default Docker Host IP is always 10.0.75.1
 
 <br></br>
 ## Containerizing monolithic applications
