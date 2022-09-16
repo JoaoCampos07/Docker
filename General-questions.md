@@ -97,7 +97,46 @@ The default Docker Host IP is always 10.0.75.1
 ### How can i set up a container with powershell ? ( pag. 93)
 Using Windows Container modules.
 
+### What happens to the properties that i define in the `appsettings.json` when i use docker ? (pag. 109)
+Those properties __will be overriden by the values of Environment Variables that are specify in docker-compose.override.yaml__ when we use the docker technology.
+In the docker-compose.yaml and docker-compose.override.yaml i can define those environment variables so that docker will set them was OS Environemnt Variables.
+In my settings.json in the app : 
+``` json
+       { 
+          "ConnectionString": "Server=tcp:127.0.0.1,5433;Initial Catalog=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=[PLACEHOLDER]",      
+          "ExternalCatalogBaseUrl": "http://localhost:5101",
+           "Logging": 
+           { 
+              "IncludeScopes": false,
+              "LogLevel": 
+                { 
+                  "Default": "Debug",
+                  "System": "Information",
+                  "Microsoft": "Information" 
+                 } 
+            } 
+        }
+```
+In my docker-compose.override.yml file   
+```yaml
+ # docker-compose.override.yml 
+ # 
+    catalog-api: 
+        environment: - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;
+    User Id=sa;Password=[PLACEHOLDER] 
+
+    # Additional environment variables for this service. 
+    ports: 
+    - "5101:80"          
+```
 <br></br>
+
+### What are the advantages of using using the configuration in the docker-compose.yml files versus using configuration in files at the project or microservice level ?
+The docker-compose.yaml files at the solution level are more flexible and secured than configuration files at project or microservice level. 
+
+### How can i can I secure secret keys, like the connection string to my PRD SQL Server, cryptographic keys or API keys ? What products do you have in the market ?
+For example, if we want to keep safe a connection string we can use the [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/). 
+
 ## Containerizing monolithic applications
 
 ### If you have to create some application fast, like a POC application, what you would use ? Monolitic apporach or microservices ? (pag. 20)
@@ -126,6 +165,15 @@ Container orchestrators creates and manage the various intanstances that need an
 Because just like a process a container does not maintain persistent state. However, we need to think of it was a `special process` that was is own File System.
 
 <br></br>
+## Docker and microservice arquitecture
+
+### Is Docker necessary when building a microservice architecture? (pag. 94)
+Docker provides a lot of benefits, however the use of docker is not a obligation. For example we can have a microservice arquitecture in `Azure Service Fabric` 
+with each microservice running __was a single process without containers__. Otherwise we can use `Azure Service Fabric` with our microservices in Docker Containers.
+Despite all this if you know how to use and deploy microservices based on containers you will know how to deploy more simple arquitecture based for example
+in a single multi-tier application. 
+
+<br></br>
 ## State and data in Docker applications
 
 ### What are the solutions for managing Data in Docker applications ? 
@@ -149,8 +197,17 @@ The data volumes are shared between the containers and the containers can "move"
 <br></br>
 ## Working with Multi-container applications 
 
-### Why we need a docker-compose.yml file ? (pag. 85)
+### Why we need a docker-compose.yml file ?
 We need it when we have a `multi-container application`. In the docker-compose.yml file we can define the set of related services/applications as a composed application using deployment commands. Configure all the dependencies of those services on each other and add run-time configuration. After we create that file we can run `docker-compose up --build` command against the `docker-compose.yml` file. This command will build all the related necessary images in __one go__. In such file we can find the name of the custom image for wich application and __configuration that might depend on the deployment environment__, like the connection string.
+
+### What can we define for our multi-comainter application using the docker-compose file ? 
+You would create a so called multi-container deployment description where you can define each of the containers(with the applications) that should be deployed, and how  they should be deployed. Them, you can deploy the whole solution, everthing, with a single command by using the docker-compose up CLI command.
+
+### How can we use the docker-compose files to target different environments ? (pag. 121)
+The docker-compose.yaml files are defintion files that can be interpreted by infracstructure(devOps) tools. The most typical one `docker-compose` command. We can use several docker-compose.yaml files to target multiple environments, having the configurations per environment. For example: `docker-compose.uat.yaml`, `docker-compose.prd.yaml` and we do `docker-compose [target-file]`.
+    
+### What is the difference between targeting Development, testing and production environments ? (pag. 121)
+In development sometimes we need to run our application in some isolated,dedicated environment with new database, new redis etc... for that we can use docker-compose up command or use visual studio. For Testing, we need it when integration tests demand a fresh environment. For example, i want to test the Unique indexs in my database, i cannot do it with in-memory database, so i do my integrations tests with the help of docker in a isolated environment. For production, normally we want to deploy to a REMOTE docker host. Also, in case if we are using a Orchestrator we may need to add some more configuration and metadata files order than `docker-compose.yaml`.
 
 <br></br>
 ## Orchestrate microservices and multi-container applications for high scalability and availability
