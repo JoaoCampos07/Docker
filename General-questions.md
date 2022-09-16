@@ -2,6 +2,9 @@
 Containerization is an approach to software development in which an application or service, its dependencies, and its configuration 
 (abstracted as deployment manifest files) are packaged together __as a container image__.
 
+### What is a container ? 
+An __isolated environment__ for running an application(or applications).
+
 ### What is the advantages of containerization ? 
 Containers offer the __benefits of isolation, portability, agility, scalability, and control__ across the whole application lifecycle workflow. 
 
@@ -25,9 +28,6 @@ Is a abstraction of an OS wich is created by a so-called `HyperVisor` - __physic
 
 ## What is a hypervisor ? 
 Is software to create and manage virtual machines. For example : `VirtualBox`, `VMWare` and `Hyper-V`.  
-
-### What is a container ? 
-An __isolated environment__ for running an application(or applications). 
 
 ### What is the difference between a virtual machine and a container ? 
 Both give the required level of isolation that we need when deploying our applications, althgout the virtual machine 
