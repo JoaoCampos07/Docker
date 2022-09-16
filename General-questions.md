@@ -59,10 +59,24 @@ and Windows Containers use the normal windows kernel that was always shipped wit
 We need a `Docker File` that describes everthing a application needs to run (every dependencie etc...). Them __instead of directly launch the application and 
 run it inside a process__ we tell docker to run it inside a container.
 
-### What the Docker File do and how visual studio creates this file for me? (pag. 77, pag.79)
+### What the Docker File do and how visual studio creates this file for me? 
 Is a file wich allows us to config the container for our application such that the Docker knows how to set it up and run it. We can add "Docker support" in visual studio when starting a project checking the check box "Enable Docker support" or by right-clicking on the project and them : 
            
           Add > Docker Support.
+
+### Each commands i have in the docker file ? 
+We have : 
+- From : `Specify Base image. To start the container __From__ a basic operation system base image`
+- Workdir : `To set a specific dir, after this command all follwing commands will be executed using that working dir.`
+- COPY : `to copy files or directories`
+- Add : `to add files or directories`
+- Run : `to execute some OS commands (Linux or Windows)`
+- Env : `to set a environment variable` 
+- Expose : `to define the port where the container should run`
+- User : `to choose each user account wiil run the application`
+- Cmd : `To specify the command that should be executured when we start a container`
+- Entrypoint : `To specify the command that should be executured when we start a container`
+
 
 ### What is `Dockarized` an application ? 
 We make a small change in our application. We add a `Docker File`, a plain text file with all the instructions to run our application in a Docker Container. 
