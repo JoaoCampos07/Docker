@@ -1,5 +1,5 @@
 <br></br>
-## Docker Basice concepts
+## Docker Basic concepts
 
 ### What is containerization ? 
 Containerization is an approach to software development in which an application or service, its dependencies, and its configuration 
