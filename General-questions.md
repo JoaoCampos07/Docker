@@ -12,7 +12,7 @@ An __isolated environment__ for running an application(or applications). A conta
 Containers offer the __benefits of isolation, portability, agility, scalability, and control__ across the whole application lifecycle workflow. 
 
 ### What is Docker ? 
-Is a platform to build, deploy and run applications in a consisttent matter (across environemnts withou `It works on my machine!`). 
+Is a platform to build, deploy and run applications in a consisttent matter (across environemnts without `It works on my machine!`). 
 > Docker is an open-source project for automating the deployment of applications as portable, self-sufficient containers that can run on the cloud or on-premises. Docker is also a company that promotes and evolves this technology.
 
 ### What i need to run docker containers on my Windows development machine ? 
