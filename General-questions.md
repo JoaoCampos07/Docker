@@ -3,7 +3,7 @@
 
 ### What is containerization ? 
 Containerization is an approach to software development in which an application or service, its dependencies, and its configuration 
-(abstracted as deployment manifest files) are packaged together __as a container image__.
+(abstracted as deployment manifest files) __are packaged together as a container image__.
 
 ### What is a container ? 
 An __isolated environment__ for running an application(or applications). A container is like a virtual machine in the sense that provides a isolated environment to run our applications. Can be stopped and restarted. Is just a OS process, but a special kind of process because it was is own File System.
