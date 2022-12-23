@@ -27,6 +27,10 @@ docker run -it <image> sh
 ``` powershell
 docker stop <containerID>
 docker start <containerID>
+
+# e.g.
+docker run ubuntu # since we are not interacting with the container it will finish
+docker run -it ubuntu 
 ```
 ## Executing commands in running containers :
 ``` powershell
