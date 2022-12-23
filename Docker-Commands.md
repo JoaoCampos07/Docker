@@ -1,5 +1,5 @@
 
-## Dockerfile instructions : 
+# Dockerfile instructions : 
 
 ``` powershell
 FROM         # to specify the base image
@@ -13,7 +13,8 @@ USER         # to set the user running the app
 CMD          # to set the default command/program
 ENTRYPOINT   # to set the default command/program
 ```
-
+------
+# Docker Commands 
 ## Image Commands : 
 ``` powershell
 docker build -t <name> .
