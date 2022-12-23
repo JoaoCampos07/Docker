@@ -29,7 +29,8 @@ docker start <containerID>
 ```
 ## Executing commands in running containers :
 ``` powershell
-# the difference betwen `docker run` and `docker exec` is that `docker run` is to run containers and `docker exec` is to execute a command in a already running
+# the difference betwen `docker run` and `docker exec` is that `docker run` is to
+# run containers and `docker exec` is to execute a command in a already running
 # container
 
 docker exec c1 ls
