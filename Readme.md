@@ -28,7 +28,7 @@ docker run -it <image> sh
 docker stop <containerID>
 docker start <containerID>
 
-# e.g.
+# e.g. :
 docker run ubuntu # since we are not interacting with the container it will finish
 docker run -it ubuntu 
 ```
