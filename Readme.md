@@ -48,6 +48,8 @@ jenkins-agent-dotnet                     latest             e3e25a0dbcf2   6 day
 docker push joaocampos07/jenkins-agent-with-dotnet:v1
 ````
 
+# Dealing with Containers : 
+
 ## Starting and Stopping containers :
 ``` powershell
 docker stop <containerID>
