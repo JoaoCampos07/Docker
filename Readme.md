@@ -47,6 +47,17 @@ jenkins-agent-dotnet                     latest             e3e25a0dbcf2   6 day
 # push it to repo 
 docker push joaocampos07/jenkins-agent-with-dotnet:v1
 ````
+## Pulling some image from my public docker hub
+``` powershell
+# Loggin in some linux machine
+sudo docker login
+
+# pulling image 
+sudo docker image pull joaocampos07/jenkins-agent-with-dotnet:v1
+
+# running the image
+sudo docker run -d --rm --name=agent1 -p 8089:22 joaocampos07/jenkins-agent-with-dotnet:v1
+```
 
 # Dealing with Containers : 
 
