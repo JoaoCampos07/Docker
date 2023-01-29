@@ -23,6 +23,31 @@ docker image ls
 docker run -it <image> sh
 ```
 
+# Dealing with Images : 
+
+## Putting some image on my public docker hub
+``` powershell
+
+docker images
+REPOSITORY                         TAG                IMAGE ID       CREATED       SIZE
+# I want to tag this bad boy here
+jenkins-agent-dotnet-with-server   latest             00c129889651   2 hours ago   896MB
+
+docker image tag e3e joaocampos07/jenkins-agent-with-dotnet:v1
+
+# Let's login to push this image
+docker login
+
+# Check the images one last time
+docker images
+REPOSITORY                               TAG                IMAGE ID       CREATED       SIZE
+joaocampos07/jenkins-agent-with-dotnet   v1                 e3e25a0dbcf2   6 days ago    896MB
+jenkins-agent-dotnet                     latest             e3e25a0dbcf2   6 days ago    896MB
+
+# push it to repo 
+docker push joaocampos07/jenkins-agent-with-dotnet:v1
+````
+
 ## Starting and Stopping containers :
 ``` powershell
 docker stop <containerID>
