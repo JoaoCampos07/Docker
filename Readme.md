@@ -63,6 +63,9 @@ sudo docker run -d --rm --name=agent1 -p 8089:22 joaocampos07/jenkins-agent-with
 
 ## Starting and Stopping containers :
 ``` powershell
+# check each containers are running
+docker ps
+
 docker stop <containerID>
 docker start <containerID>
 
